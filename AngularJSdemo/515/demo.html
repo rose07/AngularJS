@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="css/demo.css"/>
+  <!--  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
+
+</head>
+<body ng-app="app2">
+<!--
+加载ng-app指令的模块
+<html ng-app="optionalModuleName">
+-->
+<!-- 数字 <p ng-init="x1=1;x2=2">{{x1+x2}}</p>-->
+<!--字符串<div ng-init="string1='hu';string2='wenting'">
+    <span>{{string1+''+string2}}</span>
+</div>-->
+<!--对象<div ng-init="a1={name:'xiaoming',sex:'女'}">
+    <p><span ng-bind="a1.name+' '+'性别：'+' '+a1.sex"></span></p>
+</div>-->
+<!--<div ng-init="a1=['小明','张三','李四']">
+    <h1 ng-bind="a1[0]+a1[1]+a1[2]"></h1>
+</div>-->
+<div  ng-controller="controller2">
+    <input type="text"  ng-change="fn()" ng-model="myValue"/>
+    <span>你输入{{count}}</span>
+</div>
+
+<script src="JS/angular.js"></script>
+<script src="JS/demo.js"></script>
+</body>
+</html>

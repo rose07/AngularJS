@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app7">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="controller7">
+    姓：<br/>
+    <input type="text" ng-model="user.first"><br/>
+    名：<br/>
+    <input type="text" ng-model="user.last"><br/>
+    <button ng-click="reset()">重置</button>
+    <p>name:{{user}}</p>
+</div>
+
+<script src="JS/angular.js"></script>
+<script>
+    var app=angular.module("app7",[]);
+    app.controller("controller7",function ($scope) {
+        $scope.name={first:"李",last:"华"};
+        $scope.reset=function () {
+            $scope.user=angular.copy( $scope.name);
+        };
+        $scope.reset();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div ng-controller="controller5">
+    <button ng-click="a1=a1+1">点击</button>
+    <p>{{a1}}</p>
+</div>
+
+<script src="JS/angular.js"></script>
+<script>
+    var app=angular.module("app5",[]);
+    app.controller("controller5",function ($scope) {
+        $scope.a1=0;
+        console.log( $scope.a1);
+    })
+</script>
+</body>
+</html>

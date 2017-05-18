@@ -1,0 +1,10 @@
+table,td{
+    border: 1px solid cadetblue;
+    padding: 10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+/*even 偶数*/
+table tr:nth-child(even){
+    background-color:cornflowerblue;
+}

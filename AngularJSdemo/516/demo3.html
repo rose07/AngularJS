@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/demo3.css">
+</head>
+<body>
+<!--orderBy  进行过滤    按照时间进行排序-->
+<!--$index+1 添加序号-->
+<table ng-controller="controller3">
+    <tr ng-repeat="x in list | orderBy:'time'">
+        <td ng-bind="$index+1"></td>
+        <td ng-bind="x.name"></td>
+        <td ng-bind="x.time"></td>
+        <td ng-bind="x.tel"></td>
+        <td ng-bind="x.city"></td>
+    </tr>
+</table>
+<script src="JS/angular.js"></script>
+<script src="JS/demo3.js"></script>
+</body>
+</html>

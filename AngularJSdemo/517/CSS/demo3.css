@@ -1,0 +1,9 @@
+table,th{
+
+    text-align: center;
+}
+table,th,tr,td{
+    border: 1px solid cadetblue;
+    border-collapse: collapse;
+    padding: 10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app1">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<!--注意：必須是from
+        1.from 裡面有name屬性  novalidate 用于禁用浏览器默认的验证。
+        2.把模型綁定到元素上
+        3.模型對象有兩個屬性:user和email
+        4.使用ng-show 指令，color:red;在郵件是$dirty或$invalid 才顯示
+-->
+<div ng-controller="controller1" >
+    <form  name="myInput" novalidate>
+    <h1>验证实例</h1>
+    <p>用户名</p>
+    <input type="text" name="user" ng-model="user" required>
+    <span style="color: red;" ng-show="myInput.user.$invalid && myInput.user.$invalid">
+        <span ng-show="myInput.user.$error.required">用户名是必须的</span>
+    </span>
+    <br/>
+
+    <p>邮箱</p>
+    <input type="email" required name="email" ng-model="email">
+    <span style="color: red;" ng-show="myInput.email.$dirty&&myInput.email.$invalid">邮箱是必须的</span><br/>
+    <button type="submit" ng-disabled="myInput.user.$invalid && myInput.user.$invalid || myInput.email.$dirty&&myInput.email.$invalid">提交</button>
+    </form>
+</div>
+<script src="JS/angular.js"></script>
+<script src="JS/demo.js"></script>
+</body>
+</html>

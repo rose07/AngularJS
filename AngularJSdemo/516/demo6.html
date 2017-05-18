@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app6">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--添加指令-->
+<div my-directive></div>
+<script src="JS/angular.js"></script>
+<script>
+    var app=angular.module("app6",[]);
+    app.directive("myDirective",function () {
+        return{
+            template:"我的第一个指令"
+        }
+    })
+</script>
+</body>
+</html>

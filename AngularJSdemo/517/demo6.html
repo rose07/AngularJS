@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>依赖注入</title>
+</head>
+<body>
+<script src="JS/angular-animate.js"></script>
+<script>
+    var app=angular.module("appDemo6",[]);
+    app.value("value6",10);
+    app.controller("demo6",function ($scope,value6) {
+        $scope.num=value6;
+    })
+</script>
+</body>
+</html>

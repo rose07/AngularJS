@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app4">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/demo2.css">
+</head>
+<body>
+<table ng-controller="controller4">
+   <!-- <tr ng-repeat="x in list | orderBy:'time'">
+        <td ng-if="$odd" style="background-color: #2aabd2;"  ng-bind="$index+1"></td>
+        <td ng-if="$even"   ng-bind="$index+1"></td>
+        <td ng-if="$odd"  style="background-color: #2aabd2;" ng-bind="x.name"></td>
+        <td ng-if="$even" ng-bind="x.name"></td>
+        <td ng-if="$odd"  style="background-color: #2aabd2;" ng-bind="x.time"></td>
+        <td ng-if="$even" ng-bind="x.time"></td>
+        <td ng-if="$odd"  style="background-color: #2aabd2;" ng-bind="x.city"></td>
+        <td ng-if="$even" ng-bind="x.city"></td>
+        <td ng-if="$odd"  style="background-color: #2aabd2;" ng-bind="x.tel"></td>
+        <td ng-if="$even" ng-bind="x.tel"></td>
+    </tr>-->
+    <tr ng-repeat="x in list | orderBy:'time'" style="{{$even?'background-color: pink':''}}">
+        <td    ng-bind="$index+1"></td>
+        <td    ng-bind="x.name"></td>
+        <td    ng-bind="x.time"></td>
+        <td    ng-bind="x.city"></td>
+        <td    ng-bind="x.tel"></td>
+    </tr>
+</table>
+<script src="JS/angular.js"></script>
+<script src="JS/demo4.js"></script>
+</body>
+</html>
